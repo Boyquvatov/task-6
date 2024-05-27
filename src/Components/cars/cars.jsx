@@ -32,6 +32,10 @@ function Cars() {
   };
 
   const handleAddCar = () => {
+    if (!carName || !carPrice || !carBrand || !carYear) {
+      alert('Please fill in all fields');
+      return;
+    }
     const newCar = {
       id: nanoid(),
       name: carName,
